@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Laravel desde cero con nuestra guía completa. Tutoriales, ejemplos prácticos y ejercicios.">
+    <meta name="author" content="Isaac Esteban Haro Torres">
+    <title>🍃 Laravel Desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">🍃 Laravel Desde Cero</a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#contenido">Contenido</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>🍃 Laravel Desde Cero - Guía Completa</h1>
+                <p class="hero-subtitle">Aprende Laravel desde los fundamentos hasta conceptos avanzados</p>
+                <blockquote class="hero-quote">
+                    "Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience."
+                </blockquote>
+                <a href="#temas" class="btn btn-primary">Explorar Temas</a>
+            </div>
+        </section>
+
+        <section id="temas" class="topics">
+            <div class="container">
+                <h2>📖 Temas del Curso</h2>
+                <p class="topics-intro">Haz clic en cualquier tema para ver el contenido detallado</p>
+
+                <div class="topics-grid">
+                    <!-- Módulo 1 -->
+                    <div class="topic-card" data-topic="topic1">
+                        <div class="topic-header">
+                            <span class="topic-icon">📌</span>
+                            <h3>Módulo 1: Fundamentos</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema1-1">Introducción a Laravel</a></li>
+                            <li><a href="#tema1-2">Instalación y configuración</a></li>
+                            <li><a href="#tema1-3">Conceptos básicos</a></li>
+                            <li><a href="#tema1-4">Routing, Controllers, Views</a></li>
+                        </ul>
+                        <a href="#tema1-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <!-- Módulo 2 -->
+                    <div class="topic-card" data-topic="topic2">
+                        <div class="topic-header">
+                            <span class="topic-icon">⚙️</span>
+                            <h3>Módulo 2: Intermedio</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema2-1">Migraciones y seeders</a></li>
+                            <li><a href="#tema2-2">Formularios y validación</a></li>
+                            <li><a href="#tema2-3">Autenticación</a></li>
+                            <li><a href="#tema2-4">Middleware</a></li>
+                        </ul>
+                        <a href="#tema2-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <!-- Módulo 3 -->
+                    <div class="topic-card" data-topic="topic3">
+                        <div class="topic-header">
+                            <span class="topic-icon">🚀</span>
+                            <h3>Módulo 3: Avanzado</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema3-1">APIs RESTful</a></li>
+                            <li><a href="#tema3-2">Laravel Sanctum/Passport</a></li>
+                            <li><a href="#tema3-3">Colas y Jobs</a></li>
+                            <li><a href="#tema3-4">Notificaciones</a></li>
+                        </ul>
+                        <a href="#tema3-1" class="btn-topic">Ver tema →</a>
+                    </div>
+                </div>
+
+                <!-- Contenido Detallado de Temas -->
+                <div class="topic-content" id="topic-content">
+                    <!-- Tema 1-1 -->
+                    <div class="content-detail" id="tema1-1">
+                        <h3>📌 Introducción a Laravel</h3>
+                        <div class="content-body">
+                            <p><strong>¿Qué es Laravel?</strong> Laravel es un framework de código abierto para PHP creado por Taylor Otwell en 2011. Sigue el patrón de diseño Modelo-Vista-Controlador (MVC) y ofrece una sintaxis expresiva y elegante.</p>
+
+                            <h4>Características principales:</h4>
+                            <ul>
+                                <li><strong>Eloquent ORM:</strong> Sistema de base de datos activo para trabajar con datos.</li>
+                                <li><strong>Blade Template:</strong> Motor de plantillas ligero y potente.</li>
+                                <li><strong>Artisan CLI:</strong> Herramienta de línea de comandos integrada.</li>
+                                <li><strong>Middleware:</strong> Filtrado de peticiones HTTP.</li>
+                                <li><strong>Autenticación:</strong> Sistema de auth listo para usar.</li>
+                                <li><strong>Enrutamiento:</strong> Sistema de rutas flexible y expresivo.</li>
+                                <li><strong>Colas:</strong> Gestión de tareas en segundo plano.</li>
+                                <li><strong>Testing:</strong> Soporte integrado para pruebas unitarias.</li>
+                            </ul>
+
+                            <h4>Arquitectura MVC:</h4>
+                            <ul>
+                                <li><strong>Modelo:</strong> Gestiona la lógica de datos y negocio.</li>
+                                <li><strong>Vista:</strong> Presenta los datos al usuario.</li>
+                                <li><strong>Controlador:</strong> Maneja las peticiones y coordina modelo y vista.</li>
+                            </ul>
+
+                            <h4>Versiones de Laravel:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Versión</th>
+                                    <th>Lanzamiento</th>
+                                    <th>Soporte hasta</th>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 8</td>
+                                    <td>Septiembre 2020</td>
+                                    <td>Julio 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 9</td>
+                                    <td>Febrero 2022</td>
+                                    <td>Febrero 2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 10</td>
+                                    <td>Febrero 2023</td>
+                                    <td>Agosto 2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Laravel 11</td>
+                                    <td>Marzo 2024</td>
+                                    <td>Marzo 2026</td>
+                                </tr>
+                            </table>
+
+                            <div class="info-box">
+                                <strong>💡 Dato curioso:</strong> Laravel fue creado porque Taylor Otwell no estaba satisfecho con los frameworks PHP existentes como CodeIgniter. El nombre "Laravel" significa "amor" en latín.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-2 -->
+                    <div class="content-detail" id="tema1-2">
+                        <h3>🔧 Instalación y Configuración</h3>
+                        <div class="content-body">
+                            <h4>Requisitos del sistema:</h4>
+                            <ul>
+                                <li>PHP >= 8.1</li>
+                                <li>Composer</li>
+                                <li>Extensiones PHP: BCMath, Ctype, cURL, DOM, Fileinfo, JSON, Mbstring, OpenSSL, PCRE, PDO, Tokenizer, XML</li>
+                            </ul>
+
+                            <h4>Instalación con Composer:</h4>
+                            <pre><code class="language-bash"># Crear nuevo proyecto
+composer create-project laravel/laravel mi-app
+
+# Especificar versión
+composer create-project laravel/laravel:^10.0 mi-app
+
+# Entrar al proyecto
+cd mi-app
+
+# Iniciar servidor de desarrollo
+php artisan serve
+
+# Acceder a http://localhost:8000</code></pre>
+
+                            <h4>Instalación con Laravel Installer:</h4>
+                            <pre><code class="language-bash"># Instalar Laravel Installer globalmente
+composer global require laravel/installer
+
+# Crear proyecto
+laravel new mi-app
+
+# Con Jetstream (auth completo)
+laravel new mi-app --jet
+
+# Con Breeze (auth ligero)
+laravel new mi-app --starter-kit=blade</code></pre>
+
+                            <h4>Estructura de directorios:</h4>
+                            <pre><code class="language-bash">mi-app/
+├── app/           # Lógica de la aplicación
+│   ├── Http/      # Controladores, Middleware, Requests
+│   ├── Models/    # Modelos Eloquent
+│   └── Providers/ # Service providers
+├── bootstrap/     # Archivos de arranque
+├── config/        # Archivos de configuración
+├── database/      # Migraciones, seeders, factories
+├── public/        # Punto de entrada (index.php)
+├── resources/     # Vistas, assets, lang
+├── routes/        # Definición de rutas
+├── storage/       # Logs, archivos, cache
+└── tests/         # Pruebas automatizadas</code></pre>
+
+                            <h4>Configuración del entorno:</h4>
+                            <pre><code class="language-bash"># Copiar archivo de entorno
+cp .env.example .env
+
+# Generar clave de aplicación
+php artisan key:generate
+
+# Configurar base de datos en .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mi_app
+DB_USERNAME=root
+DB_PASSWORD=secret</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Nunca compartas tu archivo .env. Contiene información sensible como credenciales de base de datos y claves API.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-3 -->
+                    <div class="content-detail" id="tema1-3">
+                        <h3>📚 Conceptos Básicos</h3>
+                        <div class="content-body">
+                            <h4>Service Container:</h4>
+                            <p>El Service Container es una herramienta poderosa para gestionar dependencias y realizar inyección de dependencias.</p>
+
+                            <pre><code class="language-php">// Binding en AppServiceProvider
+public function register()
+{
+    $this->app->bind('Repository', function ($app) {
+        return new EloquentRepository();
+    });
+}
+
+// Inyección automática
+public function index(UserRepository $repo)
+{
+    return $repo->all();
+}</code></pre>
+
+                            <h4>Service Providers:</h4>
+                            <p>Los providers son el lugar central para configurar tu aplicación.</p>
+
+                            <pre><code class="language-php">class AppServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+        // Registrar bindings
+    }
+
+    public function boot()
+    {
+        // Ejecutar después de que todos los providers estén registrados
+    }
+}</code></pre>
+
+                            <h4>Facades:</h4>
+                            <p>Las facades proporcionan una interfaz estática para las clases disponibles en el service container.</p>
+
+                            <pre><code class="language-php">use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
+// Uso de facades
+$users = DB::table('users')->get();
+Cache::put('key', 'value', 3600);
+Mail::to($user)->send(new OrderShipped());</code></pre>
+
+                            <h4>Helpers comunes:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Helper</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>app()</td>
+                                    <td>Obtener instancia del container</td>
+                                </tr>
+                                <tr>
+                                    <td>auth()</td>
+                                    <td>Obtener instancia de autenticación</td>
+                                </tr>
+                                <tr>
+                                    <td>config()</td>
+                                    <td>Obtener valor de configuración</td>
+                                </tr>
+                                <tr>
+                                    <td>env()</td>
+                                    <td>Obtener variable de entorno</td>
+                                </tr>
+                                <tr>
+                                    <td>request()</td>
+                                    <td>Obtener instancia de request</td>
+                                </tr>
+                                <tr>
+                                    <td>response()</td>
+                                    <td>Crear respuesta HTTP</td>
+                                </tr>
+                                <tr>
+                                    <td>view()</td>
+                                    <td>Obtener vista</td>
+                                </tr>
+                            </table>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Las facades son opcionales. Puedes usar inyección de dependencias para un código más testeable.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-4 -->
+                    <div class="content-detail" id="tema1-4">
+                        <h3>🛣️ Routing, Controllers, Views</h3>
+                        <div class="content-body">
+                            <h4>Rutas básicas:</h4>
+                            <pre><code class="language-php">// routes/web.php
+
+// Ruta básica
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Ruta con parámetro
+Route::get('/user/{id}', function ($id) {
+    return "User $id";
+});
+
+// Ruta con parámetro opcional
+Route::get('/user/{name?}', function ($name = 'Guest') {
+    return "Hello $name";
+});
+
+// Ruta con nombre
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+// Generar URL
+$url = route('profile');</code></pre>
+
+                            <h4>Grupos de rutas:</h4>
+                            <pre><code class="language-php">// Con middleware
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/settings', [SettingsController::class, 'index']);
+});
+
+// Con prefijo
+Route::prefix('admin')->group(function () {
+    Route::get('/users', [AdminController::class, 'users']);
+    Route::get('/posts', [AdminController::class, 'posts']);
+});
+
+// Combinado
+Route::middleware(['auth'])->prefix('api')->group(function () {
+    Route::get('/users', [ApiController::class, 'users']);
+});</code></pre>
+
+                            <h4>Controladores:</h4>
+                            <pre><code class="language-bash"># Crear controlador
+php artisan make:controller UserController
+
+# Con métodos CRUD
+php artisan make:controller UserController --resource
+
+# Con autenticación
+php artisan make:controller UserController --auth</code></pre>
+
+                            <pre><code class="language-php">// app/Http/Controllers/UserController.php
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        $users = User::all();
+        return view('users.index', compact('users'));
+    }
+
+    public function show($id)
+    {
+        $user = User::findOrFail($id);
+        return view('users.show', compact('user'));
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users',
+        ]);
+
+        User::create($validated);
+        return redirect()->route('users.index');
+    }
+}</code></pre>
+
+                            <h4>Vistas Blade:</h4>
+                            <pre><code class="language-blade">&lt;!-- resources/views/users/index.blade.php --&gt;
+@extends('layouts.app')
+
+@section('content')
+&lt;div class="container"&gt;
+    &lt;h1&gt;Usuarios&lt;/h1&gt;
+
+    @foreach($users as $user)
+        &lt;div class="user-card"&gt;
+            &lt;h2&gt;{{ $user->name }}&lt;/h2&gt;
+            &lt;p&gt;{{ $user->email }}&lt;/p&gt;
+        &lt;/div&gt;
+    @endforeach
+
+    {{-- Directivas de control --}}
+    @if($users->isEmpty())
+        &lt;p&gt;No hay usuarios&lt;/p&gt;
+    @endif
+
+    @foreach($users as $index => $user)
+        @if($loop->first)
+            &lt;span&gt;Primero&lt;/span&gt;
+        @endif
+    @endforeach
+&lt;/div&gt;
+@endsection</code></pre>
+
+                            <h4>Componentes Blade:</h4>
+                            <pre><code class="language-blade">&lt;!-- Crear componente --&gt;
+php artisan make:component Alert
+
+&lt;!-- Uso --&gt;
+&lt;x-alert type="success" message="Operación exitosa" /&gt;</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa rutas con nombre para generar URLs. Si cambias la URL, solo necesitas actualizarla en un lugar.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-1 -->
+                    <div class="content-detail" id="tema2-1">
+                        <h3>🗄️ Migraciones y Seeders</h3>
+                        <div class="content-body">
+                            <h4>Crear migraciones:</h4>
+                            <pre><code class="language-bash"># Crear migración
+php artisan make:migration create_users_table
+
+# Crear con modelo
+php artisan make:model Post -m
+
+# Crear migración para modificar tabla
+php artisan make:migration add_votes_to_users_table --table=users</code></pre>
+
+                            <h4>Ejecutar migraciones:</h4>
+                            <pre><code class="language-bash"># Ejecutar todas las migraciones pendientes
+php artisan migrate
+
+# Forzar migración (en producción)
+php artisan migrate --force
+
+# Revertir última migración
+php artisan migrate:rollback
+
+# Revertir todas las migraciones
+php artisan migrate:reset
+
+# Revertir y re-ejecutar
+php artisan migrate:refresh
+
+# Resetear y sembrar
+php artisan migrate:refresh --seed</code></pre>
+
+                            <h4>Estructura de migración:</h4>
+                            <pre><code class="language-php">use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('content');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->boolean('published')->default(false);
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('posts');
+    }
+};</code></pre>
+
+                            <h4>Tipos de columnas comunes:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Método</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>$table->id()</td>
+                                    <td>ID autoincremental (BIGINT)</td>
+                                </tr>
+                                <tr>
+                                    <td>$table->string('name')</td>
+                                    <td>VARCHAR equivalente</td>
+                                </tr>
+                                <tr>
+                                    <td>$table->text('content')</td>
+                                    <td>TEXT equivalente</td>
+                                </tr>
+                                <tr>
+                                    <td>$table->integer('age')</td>
+                                    <td>INTEGER equivalente</td>
+                                </tr>
+                                <tr>
+                                    <td>$table->boolean('active')</td>
+                                    <td>BOOLEAN equivalente</td>
+                                </tr>
+                                <tr>
+                                    <td>$table->decimal('price', 8, 2)</td>
+                                    <td>DECIMAL con precisión</td>
+                                </tr>
+                                <tr>
+                                    <td>$table->timestamps()</td>
+                                    <td>created_at y updated_at</td>
+                                </tr>
+                            </table>
+
+                            <h4>Seeders:</h4>
+                            <pre><code class="language-bash"># Crear seeder
+php artisan make:seeder UserSeeder
+
+# Ejecutar seeders
+php artisan db:seed
+
+# Ejecutar seeder específico
+php artisan db:seed --class=UserSeeder
+
+# Seed desde DatabaseSeeder
+php artisan migrate:refresh --seed</code></pre>
+
+                            <pre><code class="language-php">// database/seeders/UserSeeder.php
+use App\Models\User;
+use Illuminate\Database\Seeder;
+
+class UserSeeder extends Seeder
+{
+    public function run(): void
+    {
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@example.com',
+            'password' => bcrypt('password'),
+        ]);
+
+        // Usando factories
+        User::factory(50)->create();
+    }
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa factories para generar datos de prueba realistas. php artisan make:factory ModelFactory --model=User
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-2 -->
+                    <div class="content-detail" id="tema2-2">
+                        <h3>📝 Formularios y Validación</h3>
+                        <div class="content-body">
+                            <h4>Validación en controlador:</h4>
+                            <pre><code class="language-php">public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|unique:users',
+        'password' => 'required|min:8|confirmed',
+        'age' => 'nullable|integer|between:18,100',
+        'website' => 'nullable|url',
+        'birth_date' => 'required|date|before:today',
+    ]);
+
+    User::create($validated);
+    return redirect()->route('users.index');
+}</code></pre>
+
+                            <h4>Reglas de validación comunes:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Regla</th>
+                                    <th>Descripción</th>
+                                </tr>
+                                <tr>
+                                    <td>required</td>
+                                    <td>Campo obligatorio</td>
+                                </tr>
+                                <tr>
+                                    <td>string</td>
+                                    <td>Debe ser string</td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>Debe ser email válido</td>
+                                </tr>
+                                <tr>
+                                    <td>unique:table</td>
+                                    <td>Único en la tabla</td>
+                                </tr>
+                                <tr>
+                                    <td>min:N</td>
+                                    <td>Valor mínimo</td>
+                                </tr>
+                                <tr>
+                                    <td>max:N</td>
+                                    <td>Valor máximo</td>
+                                </tr>
+                                <tr>
+                                    <td>confirmed</td>
+                                    <td>Debe coincidir con campo_confirmation</td>
+                                </tr>
+                                <tr>
+                                    <td>nullable</td>
+                                    <td>Puede ser null</td>
+                                </tr>
+                            </table>
+
+                            <h4>Form Request Validation:</h4>
+                            <pre><code class="language-bash"># Crear Form Request
+php artisan make:request StoreUserRequest</code></pre>
+
+                            <pre><code class="language-php">// app/Http/Requests/StoreUserRequest.php
+class StoreUserRequest extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return true; // O lógica de autorización
+    }
+
+    public function rules(): array
+    {
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'unique:users'],
+            'password' => ['required', 'min:8', 'confirmed'],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'El nombre es obligatorio',
+            'email.unique' => 'Este email ya está registrado',
+        ];
+    }
+}</code></pre>
+
+                            <pre><code class="language-php">// En el controlador
+public function store(StoreUserRequest $request)
+{
+    User::create($request->validated());
+    return redirect()->route('users.index');
+}</code></pre>
+
+                            <h4>Mostrar errores en Blade:</h4>
+                            <pre><code class="language-blade">&lt;form method="POST" action="{{ route('users.store') }}"&gt;
+    @csrf
+
+    &lt;div&gt;
+        &lt;label for="name"&gt;Nombre&lt;/label&gt;
+        &lt;input type="text" name="name" value="{{ old('name') }}"&gt;
+        @error('name')
+            &lt;span class="error"&gt;{{ $message }}&lt;/span&gt;
+        @enderror
+    &lt;/div&gt;
+
+    &lt;button type="submit"&gt;Guardar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa Form Requests para validaciones complejas. Mantienen tus controladores limpios y son reutilizables.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-3 -->
+                    <div class="content-detail" id="tema2-3">
+                        <h3>🔐 Autenticación</h3>
+                        <div class="content-body">
+                            <h4>Laravel Breeze (Auth ligero):</h4>
+                            <pre><code class="language-bash"># Instalar Breeze
+composer require laravel/breeze --dev
+
+# Instalar con Blade
+php artisan breeze:install blade
+
+# Instalar con React
+php artisan breeze:install react
+
+# Instalar con Vue
+php artisan breeze:install vue
+
+# Compilar assets
+npm install && npm run build</code></pre>
+
+                            <h4>Laravel Jetstream (Auth completo):</h4>
+                            <pre><code class="language-bash"># Instalar Jetstream
+composer require laravel/jetstream
+
+# Con Livewire
+php artisan jetstream:install livewire
+
+# Con Inertia
+php artisan jetstream:install inertia
+
+# Migrar
+php artisan migrate</code></pre>
+
+                            <h4>Autenticación manual:</h4>
+                            <pre><code class="language-php">use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
+// Intentar login
+if (Auth::attempt(['email' => $email, 'password' => $password])) {
+    // Autenticado
+    return redirect()->intended('/dashboard');
+}
+
+// Login con remember
+if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
+    return redirect()->intended('/dashboard');
+}
+
+// Obtener usuario autenticado
+$user = Auth::user();
+$id = Auth::id();
+
+// Verificar si está autenticado
+if (Auth::check()) {
+    // Usuario autenticado
+}
+
+// Logout
+Auth::logout();
+return redirect('/');</code></pre>
+
+                            <h4>Proteger rutas:</h4>
+                            <pre><code class="language-php">// En routes/web.php
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});
+
+// O en controlador
+public function __construct()
+{
+    $this->middleware('auth');
+}</code></pre>
+
+                            <h4>Reset de contraseña:</h4>
+                            <pre><code class="language-php">use Illuminate\Support\Facades\Password;
+
+// Enviar email de reset
+Password::sendResetLink(
+    request()->only('email')
+);
+
+// Resetear contraseña
+Password::reset(
+    request()->only('email', 'password', 'password_confirmation', 'token'),
+    function ($user, $password) {
+        $user->forceFill([
+            'password' => bcrypt($password)
+        ])->save();
+    }
+);</code></pre>
+
+                            <h4>Verificación de email:</h4>
+                            <pre><code class="language-php">// En el modelo
+class User extends Authenticatable implements MustVerifyEmail
+{
+    // ...
+}
+
+// En routes
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Rutas que requieren email verificado
+});</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Para APIs, usa Laravel Sanctum para autenticación simple o Passport para OAuth2 completo.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-4 -->
+                    <div class="content-detail" id="tema2-4">
+                        <h3>🛡️ Middleware</h3>
+                        <div class="content-body">
+                            <h4>¿Qué es Middleware?</h4>
+                            <p>El middleware actúa como un puente entre una petición y una respuesta. Puede filtrar, modificar o rechazar peticiones.</p>
+
+                            <h4>Middleware incluido:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Middleware</th>
+                                    <th>Propósito</th>
+                                </tr>
+                                <tr>
+                                    <td>auth</td>
+                                    <td>Verifica autenticación</td>
+                                </tr>
+                                <tr>
+                                    <td>guest</td>
+                                    <td>Redirige si está autenticado</td>
+                                </tr>
+                                <tr>
+                                    <td>verified</td>
+                                    <td>Verifica email confirmado</td>
+                                </tr>
+                                <tr>
+                                    <td>throttle</td>
+                                    <td>Limita peticiones (rate limiting)</td>
+                                </tr>
+                                <tr>
+                                    <td>admin</td>
+                                    <td>Verifica rol de administrador</td>
+                                </tr>
+                            </table>
+
+                            <h4>Crear middleware:</h4>
+                            <pre><code class="language-bash"># Crear middleware
+php artisan make:middleware CheckAge
+
+# Registrar en app/Http/Kernel.php
+protected $routeMiddleware = [
+    'age' => \App\Http\Middleware\CheckAge::class,
+];</code></pre>
+
+                            <pre><code class="language-php">// app/Http/Middleware/CheckAge.php
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+
+class CheckAge
+{
+    public function handle(Request $request, Closure $next)
+    {
+        if ($request->age &lt;= 18) {
+            return redirect('home');
+        }
+
+        return $next($request);
+    }
+}</code></pre>
+
+                            <h4>Usar middleware:</h4>
+                            <pre><code class="language-php">// En rutas
+Route::get('dashboard', function () {
+    return view('dashboard');
+})->middleware('auth', 'age');
+
+// En controlador
+public function __construct()
+{
+    $this->middleware('auth')->only(['edit', 'update']);
+    $this->middleware('age')->except(['index', 'show']);
+}</code></pre>
+
+                            <h4>Middleware global:</h4>
+                            <pre><code class="language-php">// En app/Http/Kernel.php
+protected $middleware = [
+    \App\Http\Middleware\TrustProxies::class,
+    \Illuminate\Http\Middleware\HandleCors::class,
+    // ... otros middleware globales
+];</code></pre>
+
+                            <h4>Middleware groups:</h4>
+                            <pre><code class="language-php">// En Kernel.php
+protected $middlewareGroups = [
+    'web' => [
+        \App\Http\Middleware\EncryptCookies::class,
+        // ...
+    ],
+
+    'api' => [
+        'throttle:api',
+        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+    ],
+];</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Los middleware se ejecutan en el orden que están definidos. El orden importa cuando un middleware modifica la petición.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-1 -->
+                    <div class="content-detail" id="tema3-1">
+                        <h3>🌐 APIs RESTful</h3>
+                        <div class="content-body">
+                            <h4>Crear API Resource:</h4>
+                            <pre><code class="language-bash"># Crear resource
+php artisan make:resource UserResource
+
+# Crear collection resource
+php artisan make:resource UserCollection</code></pre>
+
+                            <pre><code class="language-php">// app/Http/Resources/UserResource.php
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class UserResource extends JsonResource
+{
+    public function toArray($request): array
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email,
+            'created_at' => $this->created_at->toIso8601String(),
+            'posts_count' => $this->whenCounted('posts'),
+        ];
+    }
+}</code></pre>
+
+                            <h4>API Routes:</h4>
+                            <pre><code class="language-php">// routes/api.php
+use App\Http\Controllers\Api\UserController;
+use App\Http\Resources\UserResource;
+use App\Http\Resources\UserCollection;
+
+Route::apiResource('users', UserController::class);
+
+// O rutas manuales
+Route::get('/users', [UserController::class, 'index']);
+Route::post('/users', [UserController::class, 'store']);
+Route::get('/users/{user}', [UserController::class, 'show']);
+Route::put('/users/{user}', [UserController::class, 'update']);
+Route::delete('/users/{user}', [UserController::class, 'destroy']);</code></pre>
+
+                            <h4>API Controller:</h4>
+                            <pre><code class="language-php">// app/Http/Controllers/Api/UserController.php
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
+use App\Http\Resources\UserCollection;
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        return new UserCollection(User::paginate(15));
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:8',
+        ]);
+
+        $user = User::create($validated);
+        return new UserResource($user);
+    }
+
+    public function show(User $user)
+    {
+        return new UserResource($user);
+    }
+
+    public function update(Request $request, User $user)
+    {
+        $validated = $request->validate([
+            'name' => 'sometimes|required|string|max:255',
+            'email' => 'sometimes|required|email|unique:users,email,' . $user->id,
+        ]);
+
+        $user->update($validated);
+        return new UserResource($user);
+    }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+        return response()->noContent();
+    }
+}</code></pre>
+
+                            <h4>Respuestas API:</h4>
+                            <pre><code class="language-php">// Respuesta JSON simple
+return response()->json([
+    'message' => 'Success',
+    'data' => $data
+]);
+
+// Con código de estado
+return response()->json(['error' => 'Not found'], 404);
+
+// Resource
+return new UserResource($user);
+
+// Collection
+return UserCollection::collection($users);
+
+// Paginación
+return UserResource::collection(User::paginate(10));</code></pre>
+
+                            <h4>API Rate Limiting:</h4>
+                            <pre><code class="language-php">// En routes/api.php
+Route::middleware('throttle:60,1')->group(function () {
+    Route::get('/users', [UserController::class, 'index']);
+});</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa API Resources para transformar tus modelos. Mantienen tu lógica de presentación separada de tus modelos.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-2 -->
+                    <div class="content-detail" id="tema3-2">
+                        <h3>🔑 Laravel Sanctum/Passport</h3>
+                        <div class="content-body">
+                            <h4>Laravel Sanctum (API simple):</h4>
+                            <pre><code class="language-bash"># Instalar Sanctum
+composer require laravel/sanctum
+
+# Publicar configuración
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+# Migrar
+php artisan migrate</code></pre>
+
+                            <pre><code class="language-php">// En el modelo User
+use Laravel\Sanctum\HasApiTokens;
+
+class User extends Authenticatable
+{
+    use HasApiTokens;
+    // ...
+}</code></pre>
+
+                            <pre><code class="language-php">// Crear token
+$token = $user->createToken('api-token')->plainTextToken;
+
+// Usar token en petición
+// Authorization: Bearer {token}
+
+// Revocar token
+$user->currentAccessToken()->delete();
+
+// Revocar todos los tokens
+$user->tokens()->delete();</code></pre>
+
+                            <h4>Proteger rutas con Sanctum:</h4>
+                            <pre><code class="language-php">// routes/api.php
+use Illuminate\Http\Request;
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+});</code></pre>
+
+                            <h4>Tokens con habilidades:</h4>
+                            <pre><code class="language-php">// Crear token con habilidades
+$token = $user->createToken('api-token', ['check-status', 'place-orders']);
+
+// Verificar habilidad
+if ($request->user()->tokenCan('check-status')) {
+    // El usuario tiene esta habilidad
+}
+
+// Revocar por habilidad
+$user->tokens()->where('name', 'old-token')->delete();</code></pre>
+
+                            <h4>Laravel Passport (OAuth2 completo):</h4>
+                            <pre><code class="language-bash"># Instalar Passport
+composer require laravel/passport
+
+# Instalar
+php artisan passport:install
+
+# Migrar
+php artisan migrate</code></pre>
+
+                            <pre><code class="language-php">// En el modelo User
+use Laravel\Passport\HasApiTokens;
+
+class User extends Authenticatable
+{
+    use HasApiTokens;
+    // ...
+}</code></pre>
+
+                            <pre><code class="language-php">// En AuthServiceProvider
+use Laravel\Passport\Passport;
+
+public function boot()
+{
+    Passport::routes();
+}</code></pre>
+
+                            <h4>Comparativa:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>Sanctum</th>
+                                    <th>Passport</th>
+                                </tr>
+                                <tr>
+                                    <td>Complejidad</td>
+                                    <td>Baja</td>
+                                    <td>Alta</td>
+                                </tr>
+                                <tr>
+                                    <td>OAuth2</td>
+                                    <td>No</td>
+                                    <td>Sí</td>
+                                </tr>
+                                <tr>
+                                    <td>SPA Auth</td>
+                                    <td>Sí</td>
+                                    <td>Sí</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile Tokens</td>
+                                    <td>Sí</td>
+                                    <td>Sí</td>
+                                </tr>
+                                <tr>
+                                    <td>Scopes</td>
+                                    <td>Básicos</td>
+                                    <td>Completos</td>
+                                </tr>
+                            </table>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Usa Sanctum para la mayoría de aplicaciones. Solo usa Passport si necesitas OAuth2 completo con clientes externos.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-3 -->
+                    <div class="content-detail" id="tema3-3">
+                        <h3>📬 Colas y Jobs</h3>
+                        <div class="content-body">
+                            <h4>Configuración de colas:</h4>
+                            <pre><code class="language-bash"># Configurar en .env
+QUEUE_CONNECTION=database
+
+# Crear tabla de jobs
+php artisan queue:table
+
+# Migrar
+php artisan migrate
+
+# Ejecutar worker
+php artisan queue:work
+
+# Worker con opciones
+php artisan queue:work --queue=emails --tries=3 --timeout=120</code></pre>
+
+                            <h4>Crear Job:</h4>
+                            <pre><code class="language-bash"># Crear job
+php artisan make:job SendEmail</code></pre>
+
+                            <pre><code class="language-php">// app/Jobs/SendEmail.php
+namespace App\Jobs;
+
+use App\Models\User;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Mail;
+
+class SendEmail implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public function __construct(
+        public User $user,
+        public string $message
+    ) {}
+
+    public function handle(): void
+    {
+        Mail::to($this->user->email)
+            ->send(new EmailNotification($this->message));
+    }
+
+    public function failed(\Throwable $exception): void
+    {
+        // Manejar fallo
+        \Log::error('Job failed: ' . $exception->getMessage());
+    }
+}</code></pre>
+
+                            <h4>Dispatch de Jobs:</h4>
+                            <pre><code class="language-php">// Dispatch inmediato
+SendEmail::dispatch($user, $message);
+
+// Con delay
+SendEmail::dispatch($user, $message)->delay(now()->addMinutes(10));
+
+// En cola específica
+SendEmail::dispatch($user, $message)->onQueue('emails');
+
+// Con chain
+SendEmail::withChain([
+    new LogEmail($user),
+    new NotifyUser($user)
+])->dispatch($user, $message);</code></pre>
+
+                            <h4>Comandos de colas:</h4>
+                            <pre><code class="language-bash"># Ver jobs en cola
+php artisan queue:monitor database
+
+# Listar jobs fallidos
+php artisan queue:failed
+
+# Reintentar job fallido
+php artisan queue:retry {id}
+
+# Reintentar todos
+php artisan queue:retry all
+
+# Eliminar job fallido
+php artisan queue:forget {id}
+
+# Eliminar todos los fallidos
+php artisan queue:flush</code></pre>
+
+                            <h4>Job batching:</h4>
+                            <pre><code class="language-php">use Illuminate\Bus\Batch;
+use Illuminate\Support\Facades\Bus;
+
+$batch = Bus::batch([
+    new ProcessPodcast($podcast1),
+    new ProcessPodcast($podcast2),
+    new ProcessPodcast($podcast3),
+])->then(function (Batch $batch) {
+    // Todos los jobs completados
+})->catch(function (Batch $batch, \Throwable $e) {
+    // Primer job fallido
+})->finally(function (Batch $batch) {
+    // Batch completado (éxito o fallo)
+})->dispatch();</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Para producción, usa Redis en lugar de database driver para mejor rendimiento.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-4 -->
+                    <div class="content-detail" id="tema3-4">
+                        <h3>📢 Notificaciones</h3>
+                        <div class="content-body">
+                            <h4>Crear notificación:</h4>
+                            <pre><code class="language-bash"># Crear notificación
+php artisan make:notification InvoicePaid</code></pre>
+
+                            <pre><code class="language-php">// app/Notifications/InvoicePaid.php
+namespace App\Notifications;
+
+use App\Models\User;
+use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\MailMessage;
+
+class InvoicePaid extends Notification
+{
+    use Queueable;
+
+    public function __construct(
+        public float $amount
+    ) {}
+
+    public function via($notifiable): array
+    {
+        return ['mail', 'database', 'slack'];
+    }
+
+    public function toMail($notifiable): MailMessage
+    {
+        return (new MailMessage)
+            ->subject('Factura Pagada')
+            ->greeting('Hola!')
+            ->line('Tu factura ha sido pagada.')
+            ->line('Monto: $' . $this->amount)
+            ->action('Ver Factura', url('/invoices'))
+            ->line('Gracias por tu compra!');
+    }
+
+    public function toArray($notifiable): array
+    {
+        return [
+            'invoice_id' => $this->invoiceId,
+            'amount' => $this->amount,
+        ];
+    }
+
+    public function toSlack($notifiable): array
+    {
+        return [
+            'content' => 'Una factura ha sido pagada',
+            'attachments' => [
+                [
+                    'title' => 'Factura #' . $this->invoiceId,
+                    'fields' => [
+                        [
+                            'title' => 'Monto',
+                            'content' => '$' . $this->amount,
+                        ],
+                    ],
+                ],
+            ],
+        ];
+    }
+}</code></pre>
+
+                            <h4>Enviar notificaciones:</h4>
+                            <pre><code class="language-php">// A un usuario
+$user->notify(new InvoicePaid(100.00));
+
+// A múltiples usuarios
+$users->notify(new InvoicePaid(100.00));
+
+// Notificación global
+Notification::send($users, new InvoicePaid(100.00));
+
+// Desde el controlador
+use Illuminate\Support\Facades\Notification;
+
+Notification::send($users, new InvoicePaid(100.00));</code></pre>
+
+                            <h4>Leer notificaciones:</h4>
+                            <pre><code class="language-php">// Notificaciones no leídas
+$unread = $user->unreadNotifications;
+
+// Todas las notificaciones
+$all = $user->notifications;
+
+// Marcar como leída
+$user->unreadNotifications->markAsRead();
+
+// Contar no leídas
+$count = $user->unreadNotifications->count();</code></pre>
+
+                            <h4>Notificaciones en tiempo real:</h4>
+                            <pre><code class="language-bash"># Instalar Laravel Echo y Pusher
+npm install laravel-echo pusher-js</code></pre>
+
+                            <pre><code class="language-javascript">// resources/js/app.js
+import Echo from 'laravel-echo';
+import Pusher from 'pusher-js';
+
+window.Pusher = Pusher;
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: import.meta.env.VITE_PUSHER_APP_KEY,
+    cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+    forceTLS: true
+});</code></pre>
+
+                            <pre><code class="language-php">// En la notificación
+public function via($notifiable): array
+{
+    return ['database', 'broadcast'];
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Las notificaciones pueden ser encoladas automáticamente implementando ShouldQueue para no bloquear la respuesta.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contenido" class="content">
+            <div class="container">
+                <h2>📚 Contenido del Curso</h2>
+
+                <div class="modules">
+                    <div class="module">
+                        <h3>Módulo 1: Fundamentos</h3>
+                        <ul>
+                            <li>Introducción a Laravel</li>
+                            <li>Instalación y configuración</li>
+                            <li>Conceptos básicos</li>
+                            <li>Routing, Controllers, Views</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+
+                    <div class="module">
+                        <h3>Módulo 2: Intermedio</h3>
+                        <ul>
+                            <li>Migraciones y seeders</li>
+                            <li>Formularios y validación</li>
+                            <li>Autenticación</li>
+                            <li>Middleware</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+
+                    <div class="module">
+                        <h3>Módulo 3: Avanzado</h3>
+                        <ul>
+                            <li>APIs RESTful</li>
+                            <li>Laravel Sanctum/Passport</li>
+                            <li>Colas y Jobs</li>
+                            <li>Notificaciones</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejemplos" class="examples">
+            <div class="container">
+                <h2>📝 Ejemplos Rápidos</h2>
+
+                <div class="code-block">
+                    <h3>Comandos Artisan</h3>
+                    <pre><code class="language-bash"># Crear proyecto
+composer create-project laravel/laravel mi-app
+
+# Servidor de desarrollo
+php artisan serve
+
+# Crear controller
+php artisan make:controller UserController
+
+# Crear modelo
+php artisan make:model User -m
+
+# Ejecutar migraciones
+php artisan migrate
+
+# Listar rutas
+php artisan route:list</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Rutas</h3>
+                    <pre><code class="language-php">// routes/web.php
+
+use App\Http\Controllers\UserController;
+
+// Ruta básica
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Ruta con parámetro
+Route::get('/user/{id}', function ($id) {
+    return "User $id";
+});
+
+// Ruta con controller
+Route::get('/users', [UserController::class, 'index']);
+
+// Route group con middleware
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Eloquent ORM</h3>
+                    <pre><code class="language-php">&lt;?php
+
+use App\Models\User;
+
+// Crear
+$user = User::create([
+    'name' => 'Juan',
+    'email' => 'juan@email.com',
+    'password' => bcrypt('password'),
+]);
+
+// Leer
+$users = User::all();
+$user = User::find(1);
+
+// Actualizar
+$user->update(['name' => 'Pedro']);
+
+// Eliminar
+$user->delete();</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Blade Template</h3>
+                    <pre><code class="language-blade">&lt;!-- resources/views/users/index.blade.php --&gt;
+
+@extends('layouts.app')
+
+@section('content')
+&lt;div class="container"&gt;
+    &lt;h1&gt;Usuarios&lt;/h1&gt;
+
+    @foreach($users as $user)
+        &lt;tr&gt;
+            &lt;td&gt;{{ $user->name }}&lt;/td&gt;
+            &lt;td&gt;{{ $user->email }}&lt;/td&gt;
+        &lt;/tr&gt;
+    @endforeach
+&lt;/div&gt;
+@endsection</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources">
+            <div class="container">
+                <h2>📖 Recursos Adicionales</h2>
+
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Documentación Oficial</h4>
+                        <ul>
+                            <li><a href="https://laravel.com/docs" target="_blank">Laravel Documentation</a></li>
+                            <li><a href="https://laracasts.com/" target="_blank">Laracasts</a></li>
+                            <li><a href="https://laravel-news.com/" target="_blank">Laravel News</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h4>Herramientas</h4>
+                        <ul>
+                            <li>Laravel Installer - CLI oficial</li>
+                            <li>Laravel Debugbar - Debugging</li>
+                            <li>Laravel IDE Helper - Autocompletado</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h4>Comunidades</h4>
+                        <ul>
+                            <li><a href="https://laravel.com/docs/community" target="_blank">Laravel Community</a></li>
+                            <li>Laracasts Forum</li>
+                            <li>Reddit r/laravel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>👨‍💻 Desarrollado por Isaac Esteban Haro Torres</h2>
+                <p class="contact-title">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>📱 WhatsApp: 098805517</p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                    <p>🌐 Portafolio: <a href="https://ieharo1.github.io/portafolio-isaac.haro/" target="_blank">ieharo1.github.io/portafolio-isaac.haro/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
